@@ -1,0 +1,125 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Find Hidden Cafes in Nairobi path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: FindHiddenGemDining
+  - action: utter_FindHiddenGemDining
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_EnjoyMeal
+
+- story: Discover Hidden Cafes in Mombasa path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: FindHiddenGemDining
+  - action: utter_FindHiddenGemDining
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_EnjoyMeal
+
+- story: Find Dining options in Maasai Mara path 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: FindFoodMaasaiMara
+  - action: utter_FindFoodMaasaiMara
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_EnjoyMeal
+
+- story: Where can i Dine in Nairobi path 6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: FindFoodNairobi
+  - action: utter_FindFoodNairobi
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: FindSpecificFood
+  - action: utter_FindSpecificFood
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_EnjoyMeal
+
+- story: Recommend Restaurants in Mombasa path 7
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: FindFoodMombasa
+    - action: utter_FindFoodMombasa
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_EnjoyMeal
+
+- story: Where can i get Swahili Food in Mombasa path 8
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: FindFoodMombasa
+    - action: utter_FindFoodMombasa
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_EnjoyMeal
+
+- story: Where can i get Fish in Kisumu path 9
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: FindFoodKisumu
+    - action: utter_FindFoodKisumu
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_EnjoyMeal
+
+- story: Recommend highly-ranked restaurants in Kenya path 10
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: FindHighlyRankedRestaurants
+    - action: utter_FindHighlyRankedRestaurants
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_EnjoyMeal
+
+- story: Show me restaurants that serve Indian dishes in Kenya path 11
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: FindIndianCuisine
+    - action: utter_FindIndianCuisine
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_EnjoyMeal
